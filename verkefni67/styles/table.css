@@ -1,0 +1,68 @@
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: 1px solid black;
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background: #739b1d;
+}
+tr:nth-child(odd) {
+	background: #739552;
+}
+tr:nth-child(even) {
+	background: #8fb146;
+}
+
+table caption {
+	font-weight: bold;
+	margin: 1rem 0 .5rem 0;
+}
+
+textarea {
+    max-width: 100%;
+}
+tfoot tr{
+  width: 100%;
+}
+tfoot th{
+  min-width: 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      text-align: right;
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: 600;
+    }
+  }
